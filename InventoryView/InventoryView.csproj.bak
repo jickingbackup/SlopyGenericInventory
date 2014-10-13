@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39511589-EEE1-4D7D-A27B-D4956B36577A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InventoryView</RootNamespace>
+    <AssemblyName>InventoryView</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCategory.cs" />
+    <Compile Include="FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IChildForm.cs" />
+    <Compile Include="IMainForm.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="MySqlExpressDB.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="WaitForm1.cs" />
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormCategories.cs" />
+    <Compile Include="XtraFormCategories.Designer.cs">
+      <DependentUpon>XtraFormCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormChangePassword.cs" />
+    <Compile Include="XtraFormChangePassword.Designer.cs">
+      <DependentUpon>XtraFormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormExpiredItems.cs" />
+    <Compile Include="XtraFormExpiredItems.Designer.cs">
+      <DependentUpon>XtraFormExpiredItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormLogin.cs" />
+    <Compile Include="XtraFormLogin.Designer.cs">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormMain.cs" />
+    <Compile Include="XtraFormMain.Designer.cs">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormProduct.cs" />
+    <Compile Include="XtraFormProduct.Designer.cs">
+      <DependentUpon>XtraFormProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormProducts.cs" />
+    <Compile Include="XtraFormProducts.Designer.cs">
+      <DependentUpon>XtraFormProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormReorderStock.cs" />
+    <Compile Include="XtraFormReorderStock.Designer.cs">
+      <DependentUpon>XtraFormReorderStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormStockReport.cs" />
+    <Compile Include="XtraFormStockReport.Designer.cs">
+      <DependentUpon>XtraFormStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormSupplier.cs" />
+    <Compile Include="XtraFormSupplier.Designer.cs">
+      <DependentUpon>XtraFormSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormSuppliers.cs" />
+    <Compile Include="XtraFormSuppliers.Designer.cs">
+      <DependentUpon>XtraFormSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraFormUpadateStock.cs" />
+    <Compile Include="XtraFormUpadateStock.Designer.cs">
+      <DependentUpon>XtraFormUpadateStock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormCategories.resx">
+      <DependentUpon>XtraFormCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormChangePassword.resx">
+      <DependentUpon>XtraFormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormExpiredItems.resx">
+      <DependentUpon>XtraFormExpiredItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormLogin.resx">
+      <DependentUpon>XtraFormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormMain.resx">
+      <DependentUpon>XtraFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormProduct.resx">
+      <DependentUpon>XtraFormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormProducts.resx">
+      <DependentUpon>XtraFormProducts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormStockReport.resx">
+      <DependentUpon>XtraFormStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormSupplier.resx">
+      <DependentUpon>XtraFormSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormSuppliers.resx">
+      <DependentUpon>XtraFormSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraFormUpadateStock.resx">
+      <DependentUpon>XtraFormUpadateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{72a79b8f-ab8b-4e8c-9a33-455b855a3002}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

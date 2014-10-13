@@ -1,0 +1,15 @@
+March 24
+=>Added
+- Action Notification
+- Name Collision Checking for Vendor,Category And Product
+- Multiuser Support with user level rules
+- check if a vendor or category can be deleted
+- Add Update Stock Form
+
+=>Todo
+- Change Main control to Ribbon control
+- stock reports
+- expiry
+
+
+<3 puca

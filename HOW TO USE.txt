@@ -1,0 +1,5 @@
+Requires :
+VS2012
+MySQL Server
+DivExprience
+
